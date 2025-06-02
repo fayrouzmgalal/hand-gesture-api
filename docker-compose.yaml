@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  gesture-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gesture-api-container
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    restart: unless-stopped
